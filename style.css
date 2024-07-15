@@ -1,0 +1,149 @@
+:root {
+  --background: #2E3440;
+  --header: #1E272E;
+  --primary: #ECEFF4;
+  --secondary: #D8DEE9;
+  --button-link: #88C0D0;
+  --highlight: #A3BE8C;
+}
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--background);
+  font-family: 'Poppins', sans-serif;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--header);
+  height: 120px;
+}
+
+.title-container > h2 {
+  width: 100%;
+  color: var(--primary);
+}
+
+nav {
+  width: 250px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--primary);
+  background-color: var(--button-link);
+  padding: 5px 22px;
+  border-radius: 20px;
+}
+
+#landing { 
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
+}
+
+#landing .hero_text {
+  color: var(--primary);
+  padding-left: 50px;
+}
+
+#landing .hero_text p {
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+#landing .hero_image img {
+  max-width: 60%;
+}
+
+#landing .hero_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a[type=button] {
+    text-decoration: none;
+      color: var(--primary);
+      background-color: var(--button-link);
+      padding: 5px 22px;
+      border-radius: 20px;
+}
+
+#feature {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#feature h2 {
+  color: var(--primary);
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-auto-columns: fit-content;
+  gap: 20px;
+}
+
+.card_container .card {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--highlight);
+  border-radius: 20px;
+  padding: 0 10px 0 10px;
+  color: var(--primary)
+}
+
+@media only screen and (max-width: 600px) {
+  #landing{
+    flex-direction: column;
+    height: fit-content;
+    height: 51vh;
+  }
+
+  #landing .hero_text {
+    padding: 0 10px 0 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #landing .hero_text h2 {
+    text-align: center;
+  }
+
+  #landing .hero_text p {
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+
+  #landing .hero_image {
+    display: none;
+  }
+
+  .card_container { 
+    grid-template-columns: repeat(auto-fit, 200px);
+  }
+}
+
+
+

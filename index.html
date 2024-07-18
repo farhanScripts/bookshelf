@@ -62,9 +62,74 @@
       </article>
 
       <article id="bookshelf">
-        <section>test</section>
+        <aside>
+          <h2>Masukkan <br> Buku Baru</h2>
+          <form action="#" id="form-tambah-buku">
+            <div class="form-group" id="judul">
+              <label for="Judul">Judul</label>
+              <input type="text" id="Judul" name="judul">
+            </div>
+            <div class="form-group">
+              <label for="Penulis">Penulis</label>
+              <input type="text" id="Penulis" name="penulis">
+            </div>
+            <div class="form-group">
+              <label for="tahun">Tahun Terbit</label>
+              <input type="number" id="tahun" name="tahun">
+            </div>
+            <div class="form-checkbox">
+              <label for="checkbox">Selesai Dibaca</label>
+              <input type="checkbox" id="checkbox">
+            </div>
+            <button type="submit">Masukkan Buku</button>
+          </form>
+        </aside>
+        <section id="fitur-buku">
+          <form action="#">
+            <div class="form-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" name="search" id="searchBook" placeholder="Cari Buku">
+            </div>
+          </form>
+        </section>
+
+        <section id="container-belum-dibaca" class="container">
+          <h2>Belum Selesai</h2>
+          <div id="undone-read-book">
+            <!-- <div class="card">
+              <div class="text-content">
+                <h2>Harry Potter</h2>
+                <p>Penulis : J.K Rowling</p>
+                <p>Tahun : 2000</p>
+              </div>
+              <div class="button-group">
+                <button class="green">Selesai Dibaca</button>
+                <button class="red">Hapus Buku</button>
+              </div>
+            </div> -->
+          </div>
+        </section>
+        <section id="container-selesai-dibaca" class="container">
+          <h2>Selesai Dibaca</h2>
+          <div id="done-read-book">
+            <!-- <div class="card">
+                <div class="text-content">
+                  <h2>Harry Potter</h2>
+                  <p>Penulis : J.K Rowling</p>
+                  <p>Tahun : 2000</p>
+                </div>
+                <div class="button-group">
+                  <button class="green">Belum Selesai Dibaca</button>
+                  <button class="red">Hapus Buku</button>
+                </div>
+              </div> -->
+          </div>
+        </section>
       </article>
     </main>
-    <footer></footer>
-  </body>
+    <footer>
+      Develop By Farhan Putra
+    </footer>
+    <script src="script.js"></script>
+  </body> 
 </html>

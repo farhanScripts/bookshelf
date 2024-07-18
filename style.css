@@ -74,19 +74,21 @@ li a {
 }
 
 a[type=button] {
-    text-decoration: none;
-      color: var(--primary);
-      background-color: var(--button-link);
-      padding: 5px 22px;
-      border-radius: 20px;
+  text-decoration: none;
+  color: var(--primary);
+  background-color: var(--button-link);
+  padding: 5px 22px;
+  border-radius: 20px;
 }
 
 #feature {
-  height: 40vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: var(--header);
+  padding-bottom: 20px;
 }
 
 #feature h2 {
@@ -103,7 +105,7 @@ a[type=button] {
 .card_container .card {
   width: 200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--highlight);
   border-radius: 20px;
@@ -111,11 +113,201 @@ a[type=button] {
   color: var(--primary)
 }
 
-@media only screen and (max-width: 600px) {
+#bookshelf {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 300px 200px;
+  grid-auto-rows: 1fr;
+  gap: 10px;
+}
+
+#bookshelf aside {
+  background: var(--header);
+  grid-row: 1/3;
+  grid-column: 1/2;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.form-group input {
+  height: 30px;
+  border: 5px solid var(--highlight);
+  padding: 0 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: white;
+}
+
+button[type='submit'] {
+  height: 44px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0 10px; 
+  background: var(--highlight);
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+button[type='submit']:hover {
+  cursor: pointer;
+}
+
+.form-checkbox {
+  margin: 10px 0;
+}
+
+#fitur-buku {
+  grid-row: 1/4;
+  grid-column: 2/4;
+  margin-top: 20px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.form-search {
+  background-color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  border-radius: 20px;
+}
+
+.form-search input {
+  border: none;
+  width: 100%;
+  height: 95%;
+}
+
+#container-belum-dibaca {
+  margin-top: 70px;
+  grid-row: 1/3;
+  grid-column: 2/4;
+  z-index: 1;
+  color: white;
+  padding: 0 30px;
+  overflow-y: scroll;
+}
+
+.card {
+  width: 70%;
+  margin-top: 20px;
+  background: var(--primary);
+  color: var(--header);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.button-group button {
+  height: 44px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border: none;
+  margin-right: 10px;
+}
+
+.button-group .red {
+  background-color: red;
+}
+
+.button-group .green {
+  background-color: var(--button-link)
+}
+
+#container-selesai-dibaca {
+  grid-row: 3/4;
+  grid-column: 2/4;
+  color: white;
+  padding: 0 30px;
+  overflow-y: scroll;
+}
+
+footer {
+  margin-top: 10px;
+  background: var(--header);
+  height: 5vh;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+@media only screen and (max-width: 834px) {
+  #bookshelf {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  #bookshelf {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px 300px 400px 400px;
+    grid-auto-rows: 1fr;
+  }
+
+  #bookshelf aside {
+    grid-row: 1/3;
+    grid-column: 1/4;
+    margin: 0 20px;
+    margin-top: 10px;
+  }
+
+  #fitur-buku {
+    grid-row: 3/-1;
+    grid-column: 1/4;
+  }
+
+  #container-belum-dibaca {
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+
+  #container-selesai-dibaca {
+    grid-row: 4/5;
+    grid-column: 1/4;
+  }
+
+  .button-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
   #landing{
     flex-direction: column;
     height: fit-content;
     height: 51vh;
+    margin-top: 50px;
   }
 
   #landing .hero_text {
